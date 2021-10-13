@@ -1,0 +1,19 @@
+curl --location --request POST 'https://api.thanks.io/api/v2/send/postcard' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer {{api_token}}'\
+--data-raw '{
+    "image_template": 6,
+    "handwriting_style": 4,
+    "qrcode_url": "https://www.thanks.io",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "recipients": [
+        {
+            "name": "Current Resident",
+            "address": "123 Main Street",
+            "city": "Fake City",
+            "province": "NY",
+            "postal_code": "55555",
+            "country": "US"
+        }
+    ]
+}'
